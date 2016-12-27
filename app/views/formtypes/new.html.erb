@@ -1,0 +1,19 @@
+<h1>hello new<h1>
+
+<%= form_for @formtype do |f| %>
+  <P>
+  <%= f.label :label %>
+  <%= f.text_field :label %>
+  </P>
+
+  <P>
+  <%= f.label :kind %>
+  <%= f.collection_select :kind, @listdate, :kind, :kind %>
+  </P>
+
+  <%= f.submit %>
+<% end %>
+
+<p>
+  <%= link_to "index", formtypes_path %>
+</p>

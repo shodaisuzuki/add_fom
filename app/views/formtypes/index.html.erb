@@ -1,0 +1,15 @@
+<h1>index</h1>
+
+<%= form_for @formtype do |f| %>
+  <% @formlist.each do |l| %>
+    <p>
+      <label for="formtype_label">
+      	<%= l.label %>
+      </label>	
+      <%= f.collection_select :kind, @formlist, :kind, :kind %>
+    </p>
+  <% end %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "add", root_path %>
